@@ -1,9 +1,9 @@
 import { Router } from "express";
-import getPositions from "../controllers/getPositions";
+import { positionController } from "../controllers/positions";
 import { validateRequestData } from "../middleware/validation";
 
 const positionsRouter = Router();
 
-positionsRouter.post("/", validateRequestData, getPositions);
+positionsRouter.post("/", validateRequestData, positionController);
 
 export default positionsRouter;
