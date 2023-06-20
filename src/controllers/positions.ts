@@ -14,9 +14,7 @@ export const positionController: RequestHandler<
 > = (req, res) => {
   logWithLocation("info", JSON.stringify(req.body));
   const requestData = req.body;
-  console.log(requestData);
   const positions = getPositions(requestData);
-  console.log(positions);
   res.status(200).json(positions);
   };
 
